@@ -3,28 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Řemeslný pivovar</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-laptop-code"></i> Můj Projekt</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-beer"></i> Náš Pivovar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Domů</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#piva">Naše piva</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cenik">Ceník</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Degustace a Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+    <div id="pivovarCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="" class="d-block w-100" alt="1. Návrh interiéru">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Návrh interiéru našeho pivovaru</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="2. Naleštěné varné kádě">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Naleštěné varné kádě se chystají</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="3. Sládek při práci">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Náš sládek v akci</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="4. Detail načepovaného piva">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Na zdraví!</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pivovarCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pivovarCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container mt-5">
+        
+        <h3 class="mb-4"><i class="fas fa-hammer"></i> Kdy už otevřeme?</h3>
+        
+        <p class="mb-1">Stavební úpravy (100 %)</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 100%;">Hotovo</div>
+        </div>
+
+        <p class="mb-1">Technologie varny (80 %)</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-warning text-dark" style="width: 80%;">Finišujeme</div>
+        </div>
+
+        <p class="mb-1">Zkušební várky (30 %)</p>
+        <div class="progress mb-5">
+            <div class="progress-bar bg-info text-dark progress-bar-striped progress-bar-animated" style="width: 30%;">Ochutnáváme</div>
+        </div>
+
+        <h3 id="piva" class="mb-4"><i class="fas fa-beer"></i> Naše vlajkové lodě</h3>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h1 class="text-warning"><i class="fas fa-glass-cheers"></i></h1>
+                        <h5 class="card-title mt-3">Ležák 12°</h5>
+                        <p class="card-text">Klasická poctivá dvanáctka s bohatou pěnou a řízem, který zažene každou žízeň.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h1 class="text-warning"><i class="fas fa-lemon"></i></h1>
+                        <h5 class="card-title mt-3">Hazy IPA 14°</h5>
+                        <p class="card-text">Svěží kalná IPA plná tónů tropického ovoce a citrusů. Perfektní na léto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h1 class="text-dark"><i class="fas fa-coffee"></i></h1>
+                        <h5 class="card-title mt-3">Stout 13°</h5>
+                        <p class="card-text">Temně černý stout s kávovými a čokoládovými tóny, který zahřeje.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="cenik" class="mb-4"><i class="fas fa-money-bill-wave"></i> Ceník sudového piva</h3>
+        <table class="table table-striped table-hover mb-5">
+            <thead class="table-dark">
+                <tr>
+                    <th>Druh piva</th>
+                    <th>Objem (KEG)</th>
+                    <th>Cena vč. DPH</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ležák 12°</td><td>15 l</td><td>950 Kč</td></tr>
+                <tr><td>Ležák 12°</td><td>30 l</td><td>1 800 Kč</td></tr>
+                <tr><td>Hazy IPA 14°</td><td>15 l</td><td>1 200 Kč</td></tr>
+                <tr><td>Stout 13°</td><td>15 l</td><td>1 150 Kč</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-4">
+        <p>&copy; 2026 Náš Řemeslný Pivovar</p>
+        <a href="dokumentace.pdf" target="_blank" class="btn btn-outline-light btn-sm mt-2">
+            <i class="fas fa-file-pdf"></i> Dokumentace k projektu
+        </a>
+    </footer>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
