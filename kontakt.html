@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Řemeslný pivovar</title>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/tom-select/dist/css/tom-select.bootstrap5.min.css">
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-beer"></i> Náš Pivovar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Domů</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kontakt.html">Degustace a Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4 text-primary">Poptávka řízené degustace</h2>
+        <p class="text-muted mb-4">Chcete si u nás zamluvit akci? Vyplňte formulář níže a my se vám obratem ozveme s nabídkou.</p>
+        
+        <form action="#" method="POST" class="bg-light p-4 border rounded shadow-sm">
+            
+            <div class="mb-4">
+                <label for="email" class="form-label fw-bold">Vaše emailová adresa <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" required placeholder="např. novak@email.cz">
+            </div>
+
+            
+            <div class="mb-4">
+                <label for="piva-select" class="form-label fw-bold">Z jakých piv chcete složit degustační menu? <span class="text-danger">*</span></label>
+                <p class="small text-muted mb-2">Toto pole je povinné. Vyberte jedno nebo více piv z naší nabídky.</p>
+                <select id="piva-select" name="degustace[]" multiple required>
+                    <option value="" disabled selected>Vyberte piva...</option>
+                    <option value="lezak">Ležák 12°</option>
+                    <option value="ipa">Hazy IPA 14°</option>
+                    <option value="stout">Stout 13°</option>
+                    <option value="ale">Pale Ale 11°</option>
+                    <option value="sour">Letní Kyseláč 10°</option>
+                </select>
+            </div>
+            
+            
+            <div class="mb-4">
+                <label for="editor" class="form-label fw-bold">Detaily akce a speciální požadavky</label>
+                <textarea id="editor" name="detaily"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-lg mt-2 text-dark fw-bold">
+                <i class="fas fa-paper-plane"></i> Odeslat poptávku
+            </button>
+        </form>
+    </div>
+
     
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-2">&copy; 2026 Náš Řemeslný Pivovar</p>
+        <a href="dokumentace.pdf" target="_blank" class="btn btn-outline-light btn-sm">
+            <i class="fas fa-file-pdf"></i> Dokumentace k projektu
+        </a>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <script src="node_modules/tom-select/dist/js/tom-select.complete.min.js"></script>
+    
+    <script>
+        tinymce.init({
+            selector: '#editor',
+            license_key: 'gpl',
+            height: 350,
+            menubar: false,
+            placeholder: 'Zde můžete formátovaně popsat harmonogram nebo případná dietní omezení...',
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist'
+        });
+
+        new TomSelect("#piva-select", {
+            plugins: ['remove_button'],
+            placeholder: "Vyberte piva z nabídky...",
+            maxItems: null
+        });
+    </script>
 </body>
 </html>

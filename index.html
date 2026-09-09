@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Řemeslný pivovar</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/sandstone/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="fas fa-beer"></i> Náš Pivovar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -27,28 +27,28 @@
     </nav>
 
     <div id="pivovarCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner shadow-sm">
             <div class="carousel-item active">
-                <img src="" class="d-block w-100" alt="1. Návrh interiéru">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                <img src="" class="d-block w-100" alt="Návrh interiéru">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
                     <h5>Návrh interiéru našeho pivovaru</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="2. Naleštěné varné kádě">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                <img src="" class="d-block w-100" alt="Varné kádě">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
                     <h5>Naleštěné varné kádě se chystají</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="3. Sládek při práci">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                <img src="" class="d-block w-100" alt="Sládek při práci">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
                     <h5>Náš sládek v akci</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="4. Detail načepovaného piva">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                <img src="" class="d-block w-100" alt="Načepované pivo">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
                     <h5>Na zdraví!</h5>
                 </div>
             </div>
@@ -63,56 +63,59 @@
 
     <div class="container mt-5">
         
-        <h3 class="mb-4"><i class="fas fa-hammer"></i> Kdy už otevřeme?</h3>
+
+        <h3 class="mb-4 text-primary"><i class="fas fa-hammer"></i> Kdy už otevřeme?</h3>
         
-        <p class="mb-1">Stavební úpravy (100 %)</p>
+        <p class="mb-1 fw-bold">Stavební úpravy (100 %)</p>
         <div class="progress mb-3">
             <div class="progress-bar bg-success" style="width: 100%;">Hotovo</div>
         </div>
 
-        <p class="mb-1">Technologie varny (80 %)</p>
+        <p class="mb-1 fw-bold">Technologie varny (80 %)</p>
         <div class="progress mb-3">
             <div class="progress-bar bg-warning text-dark" style="width: 80%;">Finišujeme</div>
         </div>
 
-        <p class="mb-1">Zkušební várky (30 %)</p>
+        <p class="mb-1 fw-bold">Zkušební várky (30 %)</p>
         <div class="progress mb-5">
-            <div class="progress-bar bg-info text-dark progress-bar-striped progress-bar-animated" style="width: 30%;">Ochutnáváme</div>
+            <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 30%;">Ochutnáváme</div>
         </div>
 
-        <h3 id="piva" class="mb-4"><i class="fas fa-beer"></i> Naše vlajkové lodě</h3>
+
+        <h3 id="piva" class="mb-4 text-primary"><i class="fas fa-glass-cheers"></i> Naše vlajkové lodě</h3>
         <div class="row mb-5">
-            <div class="col-md-4">
-                <div class="card h-100">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
                     <div class="card-body text-center">
-                        <h1 class="text-warning"><i class="fas fa-glass-cheers"></i></h1>
+                        <div class="text-warning card-icon"><i class="fas fa-beer"></i></div>
                         <h5 class="card-title mt-3">Ležák 12°</h5>
                         <p class="card-text">Klasická poctivá dvanáctka s bohatou pěnou a řízem, který zažene každou žízeň.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
                     <div class="card-body text-center">
-                        <h1 class="text-warning"><i class="fas fa-lemon"></i></h1>
+                        <div class="text-warning card-icon"><i class="fas fa-lemon"></i></div>
                         <h5 class="card-title mt-3">Hazy IPA 14°</h5>
                         <p class="card-text">Svěží kalná IPA plná tónů tropického ovoce a citrusů. Perfektní na léto.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
                     <div class="card-body text-center">
-                        <h1 class="text-dark"><i class="fas fa-coffee"></i></h1>
+                        <div class="text-dark card-icon"><i class="fas fa-coffee"></i></div>
                         <h5 class="card-title mt-3">Stout 13°</h5>
-                        <p class="card-text">Temně černý stout s kávovými a čokoládovými tóny, který zahřeje.</p>
+                        <p class="card-text">Temně černý stout s kávovými a čokoládovými tóny, který dokonale zahřeje.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h3 id="cenik" class="mb-4"><i class="fas fa-money-bill-wave"></i> Ceník sudového piva</h3>
-        <table class="table table-striped table-hover mb-5">
+    
+        <h3 id="cenik" class="mb-4 text-primary"><i class="fas fa-money-bill-wave"></i> Ceník sudového piva</h3>
+        <table class="table table-hover bg-white shadow-sm mb-5">
             <thead class="table-dark">
                 <tr>
                     <th>Druh piva</th>
@@ -130,9 +133,10 @@
 
     </div>
 
+
     <footer class="bg-dark text-white text-center py-4 mt-4">
-        <p>&copy; 2026 Náš Řemeslný Pivovar</p>
-        <a href="dokumentace.pdf" target="_blank" class="btn btn-outline-light btn-sm mt-2">
+        <p class="mb-2">&copy; 2026 Náš Řemeslný Pivovar</p>
+        <a href="dokumentace.pdf" target="_blank" class="btn btn-outline-light btn-sm">
             <i class="fas fa-file-pdf"></i> Dokumentace k projektu
         </a>
     </footer>
