@@ -80,8 +80,25 @@
             license_key: 'gpl',
             height: 350,
             menubar: false,
+            plugins: 'image',
             placeholder: 'Zde můžete formátovaně popsat harmonogram nebo případná dietní omezení...',
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist'
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | image',
+            image_title: true,
+            file_picker_types: 'image',
+            file_picker_callback: function(callback, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.onchange = function() {
+                    var file = this.files[0];
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function() {
+                        callback(reader.result, { alt: file.name });
+                    };
+                };
+                input.click();
+            }
         });
 
         new TomSelect("#piva-select", {
